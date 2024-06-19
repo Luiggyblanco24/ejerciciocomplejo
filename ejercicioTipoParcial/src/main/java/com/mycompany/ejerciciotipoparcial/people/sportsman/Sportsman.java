@@ -6,30 +6,38 @@ import com.mycompany.ejerciciotipoparcial.sportCenter.Sport;
 
 public class Sportsman extends Person implements Doping, Feeding {
     
+    private typePerson type;
     private Sport sport;
 
-    public Sportsman(Sport sport, String name, String lastname, int age, String Id, typePerson type) {
+    public Sportsman(Sport sport, String name, String lastname, int age, String Id) {
         super(name, lastname, age, Id, typePerson.SPORTSMAN);
+        this.type = typePerson.SPORTSMAN;
+        this.sport = sport;
+    }
+
+    public typePerson getType() {
+        return type;
+    }
+
+    public void setType(typePerson type) {
+        this.type = type;
+    }
+
+    public Sport getSport() {
+        return sport;
+    }
+
+    public void setSport(Sport sport) {
         this.sport = sport;
     }
 
     @Override
     public void doTest() {
-        System.out.println("Hacer pueba de sangre");
+        System.out.println("Hacer prueba de sangre");
     }
 
     @Override
     public void diet() {
-        if(this.sport == Sport.FOOTBALL){
-            System.out.println("haciendo dieta futbolera");
-        }
-        else if( this.sport==Sport.BASKERBALL){
-            System.out.println("Haciendo dieta Basquetbolera");
-        }
-        else if(this.sport == Sport.TENNIS){
-            System.out.println("Haciendo dieta tenista");
-        }
-        
+        System.out.println("Seguir una dieta balanceada");
     }
-        
 }
