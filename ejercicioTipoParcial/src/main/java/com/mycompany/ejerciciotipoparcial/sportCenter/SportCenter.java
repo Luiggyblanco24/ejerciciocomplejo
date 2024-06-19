@@ -61,7 +61,7 @@ public class SportCenter {
                 Scenary sc = this.scenaries.get(index);
                 if (sc.isAvaible()) {
                     sc.setAvaible(false);
-                    throw new Exception("los coach pueden reservar escenario");
+                    throw new Exception("los coach y deportistas pueden reservar escenario");
 
                 } else {
                     throw new Exception("El escenario no está disponible");

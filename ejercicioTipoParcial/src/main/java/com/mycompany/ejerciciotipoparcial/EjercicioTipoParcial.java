@@ -19,22 +19,21 @@ public class EjercicioTipoParcial {
         center.addScenary(escenario);
 
         //Coach coach = new Coach("Pepe", "Perez", 16, "dedd");
-        //Sportsman sportsman = new Sportsman(FOOTBALL,"luiggy", "vega", 22, "sasas");
+        Sportsman sportsman = new Sportsman(FOOTBALL,"luiggy", "vega", 22, "sasas");
         Visitante visitante = new Visitante("Juan", "Lopez", 55, "sadas");
         
         Document document = new Document();
 
         try {
             //center.reservScenary(coach.getType(), escenario);
-            //center.reservScenary(sportsman.getType(), escenario);
-            center.reservScenary(visitante.getType(), escenario);
+            center.reservScenary(sportsman.getType(), escenario);
+            //center.reservScenary(visitante.getType(), escenario);
             
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         
-        document.guardarEscenary(center, typePerson.VISITANTE);
-
-        
+        document.guardarEscenary(center, typePerson.SPORTSMAN);
+    
     }}
 
